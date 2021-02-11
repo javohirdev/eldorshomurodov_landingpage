@@ -1,0 +1,624 @@
+/* CSS FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar{
+    width: 2.5px!important;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #06222E!important;
+}
+
+/* TEXT ANIMATION */
+
+@keyframes typingEffect{
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100px;
+    background-color: transparent;
+    z-index: 1;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+}
+nav.fixed{ /*NAVBAR SCROLL*/
+    background-color: #181a1ee7;
+}
+nav > .navbar-brand{
+    float: left;
+    width: 10%;
+    height: 100%;
+    margin-top: 5px;
+    padding-left: 5rem;
+    display: flex;
+    align-items: center;
+}
+nav > .navbar-nav{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 5rem;
+}
+nav > .navbar-nav > li{
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-nav > li > a{
+    display: block;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+}
+nav .icon-burger{
+    display: none;
+    position: absolute;
+    right: 3%;
+    top: 33%;
+    transform: translateY(-50%);
+}
+
+/* HOME SECTION */
+
+.home{
+    background: url("../images/bg.png") no-repeat;
+    background-size: cover;
+    height: 42.5rem;
+}
+.home > h1{
+    position: absolute;
+    top: -5%;
+    left: 24%;
+    font-size: 12rem;
+    text-transform: uppercase;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    animation: typingEffect 3.5s steps(30, end);
+}
+.home > img{
+    width: 40%;
+    transform: translate(73%, 21.5%);
+}
+
+/* INFO SECTION */
+
+.info{
+    padding: 5rem 0 5rem;
+}
+.info > .main{
+    display: flex;
+}
+.main > .side1{
+    padding-left: 7rem;
+}
+.side1 > img{
+    width: 93%;
+}
+.side2 > h2{
+    color: #212121;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    width: 70%;
+    margin: 10px;
+}
+.name > .surname{
+    color: #9B9B9B;
+}
+.smallInfos{
+    display: flex;
+    margin-top: 3rem;
+}
+.smallInfos > p{
+    width: 16%;
+    font-size: 18px;
+    margin: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.smallInfos > p > span{
+    color: #9B9B9B;
+}
+
+.previous_clubs > p{
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 40px 15px;
+}
+.previous_clubs > img{
+    margin-left: 15px;
+}
+
+/* VIDEO SECTION */
+
+.video{
+    background-color: #181A1E;
+    height: 30rem;
+    padding: 2rem;
+}
+.video > .videoMain{
+    text-align: center;
+}
+
+/* FOOTER END OF THE LANDING PAGE */
+
+.footer{
+    padding: 1rem;
+}
+.footer > .copyrightText{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 420px){
+
+    /* NAVBAR */
+
+    nav{
+        height: 65px;
+        transition: 0.5s ease;
+    }
+    nav > .navbar-brand{
+        padding-left: 1rem;
+        height: 90%;
+    }
+    .navbar-brand > img{
+        width: 100%;
+    }
+    nav > .navbar-nav{
+        float: none;
+        position: fixed;
+        top: 23%;
+        left: 28%;
+        height: auto;
+        justify-content: space-evenly;
+        flex-direction: column;
+        transition: 0.5 ease;
+        display: none;
+    }
+    .navbar-nav > li > a{
+        font-size: 35px;
+    }
+    .icon-burger{
+        position: absolute;
+        right: 5%;
+        top: 50%!important;
+        transform: translateY(-50%);
+        display: block!important;
+    }
+    .icon-burger > .line{
+        width: 23px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px;
+        border-radius: 3px;
+    }
+    .change{
+        display: block!important;
+        transition: 0.5s ease;
+    }
+    .menu-bg.change-bg{
+        background-color: #181a1e;
+        height: 46rem;
+        transition: 0.5s ease;
+    }
+
+    /* HOME */
+
+    .home{
+        height: 51rem;
+        background-position: center;
+    }
+
+    .home > h1{
+        position: absolute;
+        top: 30%;
+        left: 13%;
+        font-size: 5rem;
+    }
+
+    .home > .eldor{
+        display: none;
+    }
+
+    /* INFO */
+
+    .info > .main{
+        display: inline;
+    }
+    .main > .side1{
+        padding-left: 0.5rem;
+    }
+    .side1 > img{
+        width: 92%;
+    }
+
+    .side2 > h2{
+        font-size: 35px;
+    }
+    .side2 > .smallInfos{
+        display: inline;
+    }
+    .smallInfos > p{
+        margin: 10px;
+    }
+    .previous_clubs > p{
+        margin: 40px 10px;
+    }
+    .previous_clubs > img{
+        width: 75%;
+        margin-left: 10px;
+    }
+
+    /* VIDEO */
+
+    .video{
+        height: 16rem;
+    }
+
+    .videoMain > iframe{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    /* NAVBAR */
+
+    nav{
+        height: 65px;
+        transition: 0.5s ease;
+    }
+    nav > .navbar-brand{
+        padding-left: 1rem;
+        height: 90%;
+    }
+    .navbar-brand > img{
+        width: 100%;
+    }
+    nav > .navbar-nav{
+        float: none;
+        position: fixed;
+        top: 23%;
+        left: 29%;
+        height: auto;
+        justify-content: space-evenly;
+        flex-direction: column;
+        transition: 0.5 ease;
+        display: none;
+    }
+    .navbar-nav > li > a{
+        font-size: 30px;
+    }
+    .icon-burger{
+        position: absolute;
+        right: 5%;
+        top: 50%!important;
+        transform: translateY(-50%);
+        display: block!important;
+    }
+    .icon-burger > .line{
+        width: 23px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px;
+        border-radius: 3px;
+    }
+    .change{
+        display: block!important;
+        transition: 0.5s ease;
+    }
+    .menu-bg.change-bg{
+        background-color: #181a1e;
+        height: 40rem;
+        transition: 0.5s ease;
+    }
+
+    /* HOME */
+
+    .home{
+        height: 51rem;
+        background-position: center;
+    }
+
+    .home > h1{
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        font-size: 5rem;
+    }
+
+    .home > .eldor{
+        display: none;
+    }
+
+    /* INFO */
+
+    .info > .main{
+        display: inline;
+    }
+    .main > .side1{
+        padding-left: 0.5rem;
+    }
+    .side1 > img{
+        width: 92%;
+    }
+
+    .side2 > h2{
+        font-size: 35px;
+    }
+    .side2 > .smallInfos{
+        display: inline;
+    }
+    .smallInfos > p{
+        margin: 10px;
+    }
+    .previous_clubs > p{
+        margin: 40px 10px;
+    }
+    .previous_clubs > img{
+        width: 75%;
+        margin-left: 10px;
+    }
+
+    /* VIDEO */
+
+    .video{
+        height: 16rem;
+    }
+
+    .videoMain > iframe{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 370px){
+
+    /* NAVBAR */
+
+    nav{
+        height: 65px;
+        transition: 0.5s ease;
+    }
+    nav > .navbar-brand{
+        padding-left: 1rem;
+        height: 85%;
+    }
+    .navbar-brand > img{
+        width: 100%;
+    }
+    nav > .navbar-nav{
+        float: none;
+        position: fixed;
+        top: 23%;
+        left: 29%;
+        height: auto;
+        justify-content: space-evenly;
+        flex-direction: column;
+        transition: 0.5 ease;
+        display: none;
+    }
+    .navbar-nav > li > a{
+        font-size: 30px;
+    }
+    .icon-burger{
+        position: absolute;
+        right: 5%;
+        top: 50%!important;
+        transform: translateY(-50%);
+        display: block!important;
+    }
+    .icon-burger > .line{
+        width: 23px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px;
+        border-radius: 3px;
+    }
+    .change{
+        display: block!important;
+        transition: 0.5s ease;
+    }
+    .menu-bg.change-bg{
+        background-color: #181a1e;
+        height: 40rem;
+        transition: 0.5s ease;
+    }
+
+    /* HOME */
+
+    .home{
+        height: 40rem;
+        background-position: center;
+    }
+
+    .home > h1{
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        font-size: 5rem;
+    }
+
+    .home > .eldor{
+        display: none;
+    }
+
+    /* INFO */
+
+    .info > .main{
+        display: inline;
+    }
+    .main > .side1{
+        padding-left: 0.5rem;
+    }
+    .side1 > img{
+        width: 92%;
+    }
+
+    .side2 > h2{
+        font-size: 35px;
+    }
+    .side2 > .smallInfos{
+        display: inline;
+    }
+    .smallInfos > p{
+        margin: 10px;
+    }
+    .previous_clubs > p{
+        margin: 40px 10px;
+    }
+    .previous_clubs > img{
+        width: 75%;
+        margin-left: 10px;
+    }
+
+    /* VIDEO */
+
+    .video{
+        height: 16rem;
+    }
+
+    .videoMain > iframe{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (min-width: 315px) and (max-width: 330px){
+
+    /* NAVBAR */
+
+    nav{
+        height: 65px;
+        transition: 0.5s ease;
+    }
+    nav > .navbar-brand{
+        padding-left: 1rem;
+        height: 85%;
+    }
+    .navbar-brand > img{
+        width: 100%;
+    }
+    nav > .navbar-nav{
+        float: none;
+        position: fixed;
+        top: 23%;
+        left: 33%;
+        height: auto;
+        justify-content: space-evenly;
+        flex-direction: column;
+        transition: 0.5 ease;
+        display: none;
+    }
+    .icon-burger{
+        position: absolute;
+        right: 5%;
+        top: 50%!important;
+        transform: translateY(-50%);
+        display: block!important;
+    }
+    .icon-burger > .line{
+        width: 23px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px;
+        border-radius: 3px;
+    }
+    .change{
+        display: block!important;
+        transition: 0.5s ease;
+    }
+    .menu-bg.change-bg{
+        background-color: #181a1e;
+        height: 30rem;
+        transition: 0.5s ease;
+    }
+
+    /* HOME */
+
+    .home{
+        height: 35rem;
+        background-position: center;
+    }
+
+    .home > h1{
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        font-size: 4.5rem;
+    }
+
+    .home > .eldor{
+        display: none;
+    }
+
+    /* INFO */
+
+    .info > .main{
+        display: inline;
+    }
+    .main > .side1{
+        padding-left: 0.5rem;
+    }
+    .side1 > img{
+        width: 92%;
+    }
+
+    .side2 > h2{
+        font-size: 35px;
+    }
+    .side2 > .smallInfos{
+        display: inline;
+    }
+    .smallInfos > p{
+        margin: 10px;
+    }
+    .previous_clubs > p{
+        margin: 40px 10px;
+    }
+    .previous_clubs > img{
+        width: 75%;
+        margin-left: 10px;
+    }
+
+    /* VIDEO */
+
+    .video{
+        height: 16rem;
+    }
+
+    .videoMain > iframe{
+        width: 250px;
+        height: 250px;
+    }
+}
